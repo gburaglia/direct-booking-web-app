@@ -29,7 +29,7 @@ class PropertyProvider extends Component {
         return tempItems;
     };
 
-    getProperty = slug => {
+    getProperty = (slug) => {
         let tempProperties = [...this.state.properties];
         const property = tempProperties.find(property => property.slug === slug);
         return property;
