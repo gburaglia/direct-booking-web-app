@@ -18,20 +18,25 @@ export default class SingleProperty extends Component {
   render() {
     const {getProperty} = this.context;
     const property = getProperty(this.state.slug);
-    if(!property){
-      return <div className="error">
+    if(!property) {
+      return (
+        <div className="error">
         <h3>no such property could be found...</h3>
         <Link to='/properties' className="btn-primary">
           back to properties
         </Link>
         </div>
+      );
     }
-    const {name,description,capacity,size,price,extras,breakfast,pets,images} = property
-    return <Hero hero='roomsHero'> 
-    <Banner title={`${name} property`}> 
-    <Link to="/properties" className="btn-primary">back to properties
-    </Link>
-    </Banner>
-    </Hero>
+    const {name,description,capacity,size,price,extras,breakfast,pets,images} = property;
+    return (
+      <Hero hero='roomsHero'> 
+        <Banner title={`${name} property`}> 
+          <Link to="/properties" className="btn-primary">
+            back to properties
+          </Link>
+        </Banner>
+      </Hero>
+    );
   }
 }
