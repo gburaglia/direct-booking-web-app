@@ -16,7 +16,7 @@ function App() {
       <Routes>
           <Route exact path="/" element = {<Home/>}/>
           <Route exact path="/properties/" element = {<Properties/>}/>
-          <Route exact path="/rooms/:param" element = {<SingleProperty/>}/> 
+          <Route exact path="/properties/:slug" element = {<SingleProperty/>}/> 
           <Route path="*" element = {<Error/>}/> 
       </Routes>
     </>

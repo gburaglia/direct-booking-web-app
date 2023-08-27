@@ -15,7 +15,7 @@ class PropertyProvider extends Component {
         this.setState({
             properties,
             loading: false
-        })
+        });
     };
 
     formatData(items){
@@ -36,14 +36,15 @@ class PropertyProvider extends Component {
     };
 
     render() {
-        return (<PropertyContext.Provider 
+        return (
+            <PropertyContext.Provider 
                     value={{ ...this.state,
                         getProperty: this.getProperty
                     }}>
             {this.props.children}
             </PropertyContext.Provider>
-        )
-}
+        );  
+    }
 }
 
 const PropertyConsumer = PropertyContext.Consumer;

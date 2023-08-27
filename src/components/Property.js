@@ -4,8 +4,9 @@ import defaultImg from '../images/room-1.jpeg';
 import PropTypes from 'prop-types';
 export default function Property({property}) {
     const{name,slug,images,price} = property;
-    return <article className="room">
-        <div className=".img-container"> 
+    return ( 
+    <article className="room">
+        <div className="img-container"> 
             <img src={images[0] || defaultImg} alt="single property" />
             <div className="price-top">
                 <h6>${price}</h6>
@@ -15,11 +16,9 @@ export default function Property({property}) {
                 Details
             </Link>
         </div>
-        <p className="rooms-info">{name}
-
-        </p>
-
-    </article>;
+        <p className="rooms-info">{name}</p>
+    </article>
+    );
     
 }
 
