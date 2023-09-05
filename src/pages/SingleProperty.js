@@ -49,13 +49,9 @@ export default function SingleProperty() {
               <h3>details</h3>
               <p>{description}</p>
             </article>
-            <article className="info">
-              <h3>info</h3>
-              <h6>price: ${price}</h6>
-              <h6>size: {size} SQFT</h6>
-              <h6>max capacity: {capacity} {capacity > 1 ? 'People' : 'Person'}</h6>
-              <h6>{pets ? "pets allowed" : "no pets allowed"}</h6>
-              <h6>{breakfast && "free breakfast included"}</h6>
+            <article className="info" width="320px" height="820px">
+              <h3>book now</h3>
+              <iframe id="booking-iframe" sandbox="allow-top-navigation allow-scripts allow-same-origin" style={{width: "100%", minheight: "800px"}} frameborder="0" src="https://booking.hospitable.com/widget/fc6851ea/807282?theme=beach&;checkin=null&;checkout=null&;adults=null&;children=null&;infants=null"></iframe>
             </article>
           </div>
         </section>
