@@ -24,22 +24,21 @@ export default [
       name: "Family Cabin",
       slug: "family-cabin",
       type: "single",
-      price: 100,
       size: 200,
       capacity: 1,
       pets: false,
       breakfast: false,
       featured: false,
       description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+      "Escape to the mountains and enjoy the peacefulness and solitude this 3 bedroom 2 bath cabin provides. Nestled in the mountains between Gatlinburg and Pigeon Forge, in the Sky Harbor neighborhood, this family-built cabin offers everything you need for a memorable vacation. With a brand new hot-tub, renovated bathrooms, and abundance of space, our goal is to provide a cabin that not only is secluded among the tree-tops, but also offers plenty of entertainment, stargazing, and life-long memories.",
       extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
+        "10 minutes to the strip, 20 minutes to the national park",
+        "Master bedroom with king sized bed",
+        "Hot tub, large deck, and patio furniture",
+        "Real rustic feeling with all modern amenities",
+        "TV with bring your own login streaming",
         "Internet",
-        "Comfortable beds"
+        "Feels like lots of privacy but close to everything"
       ],
       images: [
         {
@@ -52,21 +51,21 @@ export default [
         {
           fields: {
             file: {
-              url: room2
+              url: img2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: img3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: img4
             }
           }
         }
@@ -78,8 +77,8 @@ export default [
       id: "2"
     },
     fields: {
-      name: "Bachelor Cabin",
-      slug: "bachelor-cabin",
+      name: "Individual Cabin",
+      slug: "individual-cabin",
       type: "single",
       price: 150,
       size: 250,
@@ -88,15 +87,9 @@ export default [
       breakfast: false,
       featured: false,
       description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+      "Property Coming Soon",
       extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
+        "Coming soon",
       ],
       images: [
         {

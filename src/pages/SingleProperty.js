@@ -48,21 +48,28 @@ export default function SingleProperty() {
             <article className='desc'>
               <h3>details</h3>
               <p>{description}</p>
+              <article className='desc'>
+                <h4>Extras</h4>
+                <ul className="extras">
+                {extras.map((item,index) => {
+                  return <li key={index}>- {item}</li>;
+                })}
+              </ul>
+            </article>
             </article>
             <article className="info" width="320px" height="820px">
               <h3>book now</h3>
-              <iframe id="booking-iframe" sandbox="allow-top-navigation allow-scripts allow-same-origin" style={{width: "100%", minHeight: "800px"}} frameborder="0" src="https://booking.hospitable.com/widget/fc6851ea/807282?theme=desert&;checkin=null&;checkout=null&;adults=null&;children=null&;infants=null"></iframe>
+              <iframe id="booking-iframe" sandbox="allow-top-navigation allow-scripts allow-same-origin"  style={{width: "100%", minHeight: "500px"}} frameborder="0" src="https://booking.hospitable.com/widget/c1a7de2d-4d5f-415c-b4ec-81545dd29ff1/754564"></iframe>            
             </article>
           </div>
-        </section>
-        <section className='room-extras'>
-          <h6>extras</h6>
-          <ul className="extras">
-            {extras.map((item,index) => {
-              return <li key={index}>- {item}</li>;
-            })}
-          </ul>
-        </section>
+          <section className='room-extras'>
+            <h4>Also on Airbnb</h4>
+            <div class="airbnb-embed-frame" data-id="28079405" data-view="home" style={{width: "450px", minHeight: "800px"}} data-internal-initialized="1">
+            <iframe src="https://www.airbnb.com/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.getfloorspace.com%2Fembed-airbnb-calendar-on-website%2F&id=28079405#%7B%22frameId%22%3A1%2C%22tracking_PageUrl%22%3A%22https%3A%2F%2Fwww.getfloorspace.com%2Fembed-airbnb-calendar-on-website%2F%22%2C%22tracking_widgetName%22%3A%22home%22%7D" frameborder="0" style={{border: "none", position: "relative", visibility: "visible",  display: "block", margin: "10px", padding: "0px", width: "100%", minHeight: "800px", minWidth: "50px"}}></iframe>
+            </div>
+          </section>
+       </section>
+
       </>
     )
   }
