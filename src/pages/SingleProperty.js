@@ -51,7 +51,7 @@ export default function SingleProperty() {
             </article>
             <article className="info" width="320px" height="820px">
               <h3>book now</h3>
-              <iframe id="booking-iframe" sandbox="allow-top-navigation allow-scripts allow-same-origin" style={{width: "100%", minheight: "800px"}} frameborder="0" src="https://booking.hospitable.com/widget/fc6851ea/807282?theme=beach&;checkin=null&;checkout=null&;adults=null&;children=null&;infants=null"></iframe>
+              <iframe id="booking-iframe" sandbox="allow-top-navigation allow-scripts allow-same-origin" style={{width: "100%", minHeight: "800px"}} frameborder="0" src="https://booking.hospitable.com/widget/fc6851ea/807282?theme=desert&;checkin=null&;checkout=null&;adults=null&;children=null&;infants=null"></iframe>
             </article>
           </div>
         </section>
