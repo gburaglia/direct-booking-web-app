@@ -2,12 +2,16 @@
 import React, { useContext } from 'react'
 import defaultBcg from '../images/room-1.jpeg'
 import Banner from '../components/Banner'
+import Hero from "../components/Hero";
+import Attractions from "../components/Attractions";
+import PropertySummary from "../components/PropertySummary";
+
+
 
 // import the useParams hook from React Router
 import { Link, useParams } from 'react-router-dom'
 import { PropertyContext, RoomContext } from '../context'
 import StyledHero from '../components/StyledHero'
-import Slider from 'react-slick'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import the carousel styles
 
@@ -31,7 +35,7 @@ export default function SingleProperty() {
       </Link>
     </div>
   }
-  const { name, description, capacity, size, price, extras, breakfast, pets, images } = property;
+  const { name, description, capacity, size, price, extras, breakfast, pets, images, summary } = property;
   const [mainImg, ...additionalImgs] = images;
   const settings = {
     dots: true,
@@ -43,58 +47,70 @@ export default function SingleProperty() {
 
   return (
     <>
-      <StyledHero img={mainImg || defaultBcg}>
-        <Banner title={`${name} property`}>
-          <Link to="/properties" className='btn-primary'>
-            back to properties
-          </Link>
-        </Banner>
-      </StyledHero>
+      <Carousel
+              showThumbs={false}
+              showStatus={false}
+              showIndicators={true}
+              infiniteLoop={true}
+              autoPlay={true}
+              centerMode={true}
+              centerSlidePercentage={100}
+            >
+                {additionalImgs.map((item, index) => {
+                  return (
+                    <StyledHero img={item}>
+                      <Banner title={`${name} property`}>
+                        <Link to="/properties" className='btn-primary'>
+                          back to properties
+                        </Link>
+                      </Banner>
+                    </StyledHero>
+                    
+                  );
+                })}
+              
+        </Carousel>
+        <PropertySummary property={property} />
       <section className='single-room'>
-        <div className="single-room-images">
-          <Carousel
-            showThumbs={false}
-            showStatus={false}
-            showIndicators={true}
-            infiniteLoop={true}
-            autoPlay={true}
-            centerMode={true}
-            centerSlidePercentage={80}
-          >
-            {additionalImgs.map((item, index) => {
-              return (
-                <div key={index}>
-                  <img src={item} alt={name} />
-                </div>
-              );
-            })}
-          </Carousel>
-        </div>
         <div className="single-room-info">
           <article className='desc'>
-            <h3>details</h3>
-            <p>{description}</p>
-            <article className='desc'>
-              <h4>Extras</h4>
+          <h3>extras</h3>
               <ul className="extras">
                 {extras.map((item, index) => {
                   return <li key={index}>- {item}</li>;
                 })}
               </ul>
+            <article className='desc'>
+              <h4>Details</h4>
+              <p>{description}</p>
+            </article>
+            <article className='desc'>
+              <h4>Why Book Here</h4>
+              <p>Because we said so. You can trust us. Check out Airbnb and Vrbo listings to make sure.</p>
             </article>
           </article>
-          <article className="info" width="320px" height="820px">
+          <article className="info" width="320px" height="500px">
             <h3>book now</h3>
             <iframe id="booking-iframe" sandbox="allow-top-navigation allow-scripts allow-same-origin" style={{ width: "100%", minHeight: "500px" }} frameborder="0" src="https://booking.hospitable.com/widget/c1a7de2d-4d5f-415c-b4ec-81545dd29ff1/754564"></iframe>
           </article>
         </div>
-        <section className='room-extras'>
-          <h4>Also on Airbnb</h4>
-          <div class="airbnb-embed-frame" data-id="28079405" data-view="home" style={{ width: "450px", minHeight: "800px" }} data-internal-initialized="1">
-            <iframe src="https://www.airbnb.com/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.getfloorspace.com%2Fembed-airbnb-calendar-on-website%2F&id=28079405#%7B%22frameId%22%3A1%2C%22tracking_PageUrl%22%3A%22https%3A%2F%2Fwww.getfloorspace.com%2Fembed-airbnb-calendar-on-website%2F%22%2C%22tracking_widgetName%22%3A%22home%22%7D" frameborder="0" style={{ border: "none", position: "relative", visibility: "visible", display: "block", margin: "10px", padding: "0px", width: "100%", minHeight: "800px", minWidth: "50px" }}></iframe>
-          </div>
-        </section>
+        <div className="single-room-info">
+          <section className='desc'>
+            <h4>Also on Airbnb</h4>
+            <div class="airbnb-embed-frame" data-id="28079405" data-view="home" style={{ width: "450px", minHeight: "500px" }} data-internal-initialized="1">
+              <iframe src="https://www.airbnb.com/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.getfloorspace.com%2Fembed-airbnb-calendar-on-website%2F&id=28079405#%7B%22frameId%22%3A1%2C%22tracking_PageUrl%22%3A%22https%3A%2F%2Fwww.getfloorspace.com%2Fembed-airbnb-calendar-on-website%2F%22%2C%22tracking_widgetName%22%3A%22home%22%7D" frameborder="0" style={{ border: "none", position: "relative", visibility: "visible", display: "block", margin: "10px", padding: "0px", width: "100%", minHeight: "500px", minWidth: "50px" }}></iframe>
+            </div>
+          </section>
+          <section className='info'>
+            <h4>Also on Vrbo</h4>
+            <div class="airbnb-embed-frame" data-id="28079405" data-view="home" style={{ width: "450px", minHeight: "800px" }} data-internal-initialized="1">
+              <iframe src="https://www.airbnb.com/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.getfloorspace.com%2Fembed-airbnb-calendar-on-website%2F&id=28079405#%7B%22frameId%22%3A1%2C%22tracking_PageUrl%22%3A%22https%3A%2F%2Fwww.getfloorspace.com%2Fembed-airbnb-calendar-on-website%2F%22%2C%22tracking_widgetName%22%3A%22home%22%7D" frameborder="0" style={{ border: "none", position: "relative", visibility: "visible", display: "block", margin: "10px", padding: "0px", width: "100%", minHeight: "500px", minWidth: "50px" }}></iframe>
+            </div>
+          </section>
+        </div>
       </section>
+      <div className="single-room-images">
+        </div>
 
     </>
   )

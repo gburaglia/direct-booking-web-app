@@ -7,7 +7,7 @@ export default function Home() {
   return (
   <>
     <Hero> 
-      <Banner title="luxury properties" subtitle="dream cabin getaway">
+      <Banner title="stays of the smokies" subtitle="dream cabin getaway">
         <Link to="/properties" className="btn-primary">
           our properties
         </Link>

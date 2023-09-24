@@ -15,6 +15,10 @@ import img10 from "./images/room-10.jpeg";
 import img11 from "./images/room-11.jpeg";
 import img12 from "./images/room-12.jpeg";
 
+import {MdBedroomParent,MdLocationOn,MdGroups,MdBathroom} from "react-icons/md"
+
+import {MdBedroomParent,MdLocationOn,MdGroups,MdBathroom} from "react-icons/md"
+
 import imgDeck from "./images/deck.webp"
 import imgOutside from "./images/outside.webp"
 
@@ -24,8 +28,8 @@ export default [
       id: "1"
     },
     fields: {
-      name: "Family Cabin",
-      slug: "family-cabin",
+      name: "Rustic Retreat",
+      slug: "rustic-retreat",
       type: "single",
       size: 200,
       capacity: 1,
@@ -43,11 +47,29 @@ export default [
         "Internet",
         "Feels like lots of privacy but close to everything"
       ],
+      summary:[
+        {
+            icon:<MdLocationOn/>,
+            title:"Sevierville, TN"
+        },
+        {
+            icon:<MdGroups/>,
+            title:"6 guests"
+        },
+        {
+            icon:<MdBedroomParent/>,
+            title:"3 rooms/4 beds"
+        },
+        {
+            icon:<MdBathroom/>,
+            title:"2 baths"
+        },
+      ],
       images: [
         {
           fields: {
             file: {
-              url: img1
+              url: imgOutside
             }
           }
         },
