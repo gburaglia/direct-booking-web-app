@@ -16,9 +16,6 @@ import img11 from "./images/room-11.jpeg";
 import img12 from "./images/room-12.jpeg";
 
 import {MdBedroomParent,MdLocationOn,MdGroups,MdBathroom} from "react-icons/md"
-
-import {MdBedroomParent,MdLocationOn,MdGroups,MdBathroom} from "react-icons/md"
-
 import imgDeck from "./images/deck.webp"
 import imgOutside from "./images/outside.webp"
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import defaultImg from '../images/living-room.jpg';
+import defaultImg from '../images/living-room.webp';
 
 const StyledHero = styled.header`
     min-height: 60vh;

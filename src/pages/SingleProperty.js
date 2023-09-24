@@ -1,6 +1,6 @@
 // import the useContext hook from 'react', no need for Component since we are using an RFC
 import React, { useContext } from 'react'
-import defaultBcg from '../images/room-1.jpeg'
+import defaultBcg from '../images/room-1.webp'
 import Banner from '../components/Banner'
 import Hero from "../components/Hero";
 import Attractions from "../components/Attractions";
