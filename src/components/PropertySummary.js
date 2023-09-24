@@ -2,18 +2,21 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import defaultImg from '../images/living-room.jpg';
 import PropTypes from 'prop-types';
+import Title from "./Title"
+
 export default function Property({property}) {
-    const{name,slug,images,price} = property;
+    const{summary} = property;
     return ( 
-    <article className="room">
-        <div className="img-container"> 
-            <img src={images[0] || defaultImg} alt="single property" />
-            <Link to={`/properties/${slug}`} className="btn-primary room-link">
-                Details
-            </Link>
+        <section className="services">
+        <div className="services-center">
+            {summary.map((item, index)=> {
+                return <article key={index} className="service">
+                    <span>{item.icon}</span>
+                    <h6>{item.title}</h6>
+                </article>
+            })}
         </div>
-        <p className="room-info">{name}</p>
-    </article>
+    </section>
     );
     
 }
@@ -26,4 +29,3 @@ Property.propTypes = {
         //price:PropTypes.number.isRequired
     })
 }
-
