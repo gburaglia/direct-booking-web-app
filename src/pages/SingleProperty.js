@@ -59,7 +59,7 @@ export default function SingleProperty() {
                 {additionalImgs.map((item, index) => {
                   return (
                     <StyledHero img={item}>
-                      <Banner title={`${name} property`}>
+                      <Banner title={`${name}`}>
                         <Link to={`/properties/${slug}/images`} className='btn-primary'>
                           see all images
                         </Link>
