@@ -60,8 +60,8 @@ export default function SingleProperty() {
                   return (
                     <StyledHero img={item}>
                       <Banner title={`${name} property`}>
-                        <Link to="/properties" className='btn-primary'>
-                          back to properties
+                        <Link to={`/properties/${slug}/images`} className='btn-primary'>
+                          see all images
                         </Link>
                       </Banner>
                     </StyledHero>

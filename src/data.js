@@ -66,7 +66,8 @@ export default [
         {
           fields: {
             file: {
-              url: imgOutside
+              url: imgOutside,
+              src: imgOutside,
             }
           }
         },
@@ -91,6 +92,24 @@ export default [
             }
           }
         }
+      ],
+      galleryImages: [
+        {
+          src: imgOutside,
+          width: 320,
+          height: 174,
+       },
+       {
+          src: room1,
+          width: 320,
+          height: 212,
+       },
+     
+       {
+          src: imgDeck,
+          width: 320,
+          height: 212,
+       },
       ]
     }
   },

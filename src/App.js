@@ -4,6 +4,7 @@ import './App.css';
 import Home from "./pages/Home";
 import Properties from "./pages/Properties";
 import SingleProperty from "./pages/SingleProperty";
+import SinglePropertyImages from "./pages/SinglePropertyImages";
 import Error from  "./pages/Error";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -16,7 +17,8 @@ function App() {
       <Routes>
           <Route exact path="/" element = {<Home/>}/>
           <Route exact path="/properties/" element = {<Properties/>}/>
-          <Route exact path="/properties/:slug" element = {<SingleProperty/>}/> 
+          <Route exact path="/properties/:slug" element = {<SingleProperty/>}/>
+          <Route exact path="/properties/:slug/images" element = {<SinglePropertyImages/>}/>  
           <Route path="*" element = {<Error/>}/> 
       </Routes>
     </>
