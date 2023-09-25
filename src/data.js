@@ -67,7 +67,6 @@ export default [
           fields: {
             file: {
               url: imgOutside,
-              src: imgOutside,
             }
           }
         },
