@@ -1,20 +1,6 @@
 import room1 from "./images/bedroom-1.webp";
-import room2 from "./images/details-2.jpeg";
-import room3 from "./images/details-3.jpeg";
-import room4 from "./images/details-4.jpeg";
 import img1 from "./images/living-room.webp";
 import img2 from "./images/room-1.webp";
-import img3 from "./images/room-3.jpeg";
-import img4 from "./images/room-4.jpeg";
-import img5 from "./images/room-5.jpeg";
-import img6 from "./images/room-6.jpeg";
-import img7 from "./images/room-7.jpeg";
-import img8 from "./images/room-8.jpeg";
-import img9 from "./images/room-9.jpeg";
-import img10 from "./images/room-10.jpeg";
-import img11 from "./images/room-11.jpeg";
-import img12 from "./images/room-12.jpeg";
-
 import {MdBedroomParent,MdLocationOn,MdGroups,MdBathroom} from "react-icons/md"
 import imgDeck from "./images/deck.webp"
 import imgOutside from "./images/outside.webp"
@@ -139,27 +125,6 @@ export default [
             }
           }
         },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
       ]
     }
   }
