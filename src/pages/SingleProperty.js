@@ -35,7 +35,7 @@ export default function SingleProperty() {
       </Link>
     </div>
   }
-  const { name, description, capacity, size, price, extras, breakfast, pets, images, summary } = property;
+  const { name, description, disclaimers, capacity, size, price, extras, breakfast, pets, images, summary } = property;
   const [mainImg, ...additionalImgs] = images;
   const settings = {
     dots: true,
@@ -74,7 +74,7 @@ export default function SingleProperty() {
       <section className='single-room'>
         <div className="single-room-info">
           <article className='desc'>
-          <h3>extras</h3>
+          <h3>Cabin at a Glance</h3>
               <ul className="extras">
                 {extras.map((item, index) => {
                   return <li key={index}>- {item}</li>;
@@ -82,7 +82,13 @@ export default function SingleProperty() {
               </ul>
             <article className='desc'>
               <h4>Details</h4>
-              <p>{description}</p>
+              {description.map((element) => {
+                return <p>{element}</p> 
+                })}
+                <h4>Important Disclaimers About Our Cabin</h4>
+              {disclaimers.map((element) => {
+                return <p>{element}</p> 
+                })}
             </article>
             <article className='desc'>
               <h4>Why Book Here</h4>
