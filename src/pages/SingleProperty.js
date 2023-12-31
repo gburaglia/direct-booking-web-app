@@ -35,7 +35,7 @@ export default function SingleProperty() {
       </Link>
     </div>
   }
-  const { name, description, disclaimers, capacity, size, price, extras, breakfast, pets, images, summary } = property;
+  const { name, description, disclaimers, rules, capacity, size, price, extras, breakfast, pets, images, summary } = property;
   const [mainImg, ...additionalImgs] = images;
   const settings = {
     dots: true,
@@ -85,7 +85,7 @@ export default function SingleProperty() {
               {description.map((element) => {
                 return <p>{element}</p> 
                 })}
-                <h4>Important Disclaimers About Our Cabin</h4>
+                <h4>Important Disclaimers</h4>
               {disclaimers.map((element) => {
                 return <p>{element}</p> 
                 })}
@@ -93,6 +93,12 @@ export default function SingleProperty() {
             <article className='desc'>
               <h4>Why Book Here</h4>
               <p>Because we said so. You can trust us. Check out Airbnb and Vrbo listings to make sure.</p>
+              <h4>Rules</h4>
+              <ul className="extras">
+                {rules.map((item, index) => {
+                  return <li key={index}>- {item}</li>;
+                })}
+              </ul>
             </article>
           </article>
           <article className="info" width="320px" height="500px">

@@ -39,6 +39,18 @@ export default [
         "Real rustic feeling with all modern appliances and amenities. Plenty of board games too!",
         "HDTVs in the living room and each bedroom with bring-your-own-login streaming capability"
       ],
+      rules : [
+        "Maximum number of guests: 6",
+        "All guests must be 25+ (children with parents are allowed, children count towards 6 person max)",
+        "No late check out or early check in. If you arrive early or depart late you will be charged an extra $100 per hour",
+        "No pets! If you bring a pet you will be asked to leave without a refund",
+        "No refunds for circumstances out of our control like weather, power outages, and/or natural disasters",
+        "Absolutely no fires inside or out. We are in the woods, wildfires are a very real risk!",
+        "Please take care of the furniture, and do not move it. You will be held accountable for any damages",
+        "Please do the dishes and place all trash bags in the basement. Please ensure all trash is bagged and knotted",
+        "No alcohol or drugs at or near the hot tub. Do not use the hot tub if you are pregnant and/or intoxicated. Hot tub usage is at your own risk",
+        "No illegal substances allowed on the premises"
+      ],
       summary:[
         {
             icon:<MdLocationOn/>,
