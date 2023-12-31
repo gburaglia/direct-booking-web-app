@@ -2,6 +2,7 @@ import room1 from "./images/bedroom-1.webp";
 import img1 from "./images/living-room.webp";
 import img2 from "./images/room-1.webp";
 import {MdBedroomParent,MdLocationOn,MdGroups,MdBathroom} from "react-icons/md"
+import {FaShower} from "react-icons/fa"
 import imgDeck from "./images/deck.webp"
 import imgOutside from "./images/outside.webp"
 
@@ -65,7 +66,7 @@ export default [
             title:"3 rooms/4 beds"
         },
         {
-            icon:<MdBathroom/>,
+            icon:<FaShower/>,
             title:"2 baths"
         },
       ],

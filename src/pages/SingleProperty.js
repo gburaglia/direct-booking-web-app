@@ -91,8 +91,6 @@ export default function SingleProperty() {
                 })}
             </article>
             <article className='desc'>
-              <h4>Why Book Here</h4>
-              <p>Because we said so. You can trust us. Check out Airbnb and Vrbo listings to make sure.</p>
               <h4>Rules</h4>
               <ul className="extras">
                 {rules.map((item, index) => {
@@ -104,13 +102,15 @@ export default function SingleProperty() {
           <article className="info" width="320px" height="500px">
             <h3>book now</h3>
             <iframe id="booking-iframe" sandbox="allow-top-navigation allow-scripts allow-same-origin" style={{ width: "100%", minHeight: "500px" }} frameborder="0" src="https://booking.hospitable.com/widget/c1a7de2d-4d5f-415c-b4ec-81545dd29ff1/754564"></iframe>
+            <h4>Why Book Through Here</h4>
+            <p>AirBnB and VRBO fees have gone through the roof lately for both hosts and guests. We decided to make this booking platform to allow everyone to save a decent amount of money along the way! The service we provide will be the same whether you book through our site, AirBnB or VRBO.</p>
           </article>
         </div>
         <div className="single-room-info">
           <section className='desc'>
             <h4>Also on Airbnb</h4>
-            <div class="airbnb-embed-frame" data-id="28079405" data-view="home" style={{ width: "450px", minHeight: "500px" }} data-internal-initialized="1">
-              <iframe src="https://www.airbnb.com/embeddable/home?externalPageUrl=https%3A%2F%2Fwww.getfloorspace.com%2Fembed-airbnb-calendar-on-website%2F&id=28079405#%7B%22frameId%22%3A1%2C%22tracking_PageUrl%22%3A%22https%3A%2F%2Fwww.getfloorspace.com%2Fembed-airbnb-calendar-on-website%2F%22%2C%22tracking_widgetName%22%3A%22home%22%7D" frameborder="0" style={{ border: "none", position: "relative", visibility: "visible", display: "block", margin: "10px", padding: "0px", width: "100%", minHeight: "500px", minWidth: "50px" }}></iframe>
+            <div class="airbnb-embed-frame" data-id="28079405" data-view="home" style={{ width: "450px", minHeight: "800px" }} data-internal-initialized="1">
+              <iframe src="https://www.airbnb.com/rooms/605084321768371829?guests=1adults=1s=66&source=embed_widget" frameborder="0" style={{ border: "none", position: "relative", visibility: "visible", display: "block", margin: "10px", padding: "0px", width: "100%", minHeight: "500px", minWidth: "50px" }}></iframe>
             </div>
           </section>
           <section className='info'>
